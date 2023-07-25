@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookmarkpage</title>
+    <link rel="stylesheet" href="../icofont/icofont.min.css">
+    <link rel="icon" href="twitt logo.png" sizes="16px">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* outline: 2px solid red; */
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .a {
+            color: rgb(29, 155, 240);
+            text-decoration: none;
+        }
+        .foot:hover{
+            text-decoration: underline;
+        }
+        .row{
+            display: flex;
+        }
+        .column{
+            display: inline-block;
+            justify-content: center;
+        }
+        .left{
+            background-color: white;
+            width: 23%;
+            height: 650px;
+            padding: 10px 20px 0px 60px;
+            border-right: 1px solid rgb(239,243,244);
+            float: left;
+            position: sticky;
+            left: 0px;
+            top: 0;
+        }
+        .mid{
+            background-color: white;
+            width: 44%;
+            height: 100%;
+        }
+        .right{
+            background-color: white;
+            width: 33%;
+            height: 100%;
+            border-left: 1px solid rgb(239,243,244);
+        }
+        .logo{
+            width: 30px;
+            height: 30px;
+        }
+        .logocover{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: none;
+            padding: 11px;
+        }
+        .logocover:hover{
+            background-color: rgb(231,231,232);
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 22px;
+            margin-top: 7px;
+        }
+        .tweetbtn{
+            width: 220px;
+            height: 50px;
+            padding: 10px;
+            background-color: rgb(29,155,240);
+            border: 0px;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .tweetbtn:hover{
+            background-color: rgb(26,140,216);
+        }
+        .pfp{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .profilepix {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+            width: 235px;
+            height: 60px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+            border: none;
+        }
+        .profilepix:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .ppcontent{
+            background-color: white;
+            height: 120px;
+            width: 290px;
+            border-radius: 10px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 410px;
+            left: 30px;
+            color: black;
+            box-shadow: 2px 5px 10px 1px rgba(128, 128, 128, 0.479);
+            display: none;
+        }
+        .ppparent:focus-within .ppcontent{
+            display: block;
+        }
+        .pp{
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .ppcover{
+            display: grid;
+            gap: 25px;
+            padding: 20px;
+        }
+        .names{
+            display: inline-flex;
+            flex-direction: column;
+        }
+        .username{
+            color: rgb(123,136,146);
+        }
+        .name{
+            font-weight: 600;
+            width: 140px;
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            /* border-bottom: 1px solid rgb(239,243,244); */
+            padding: 5px 15px;
+            display: inline-flex;
+            gap: 30px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
+        .navname{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .navusern{
+            font-size: 13px;
+            font-weight: 400;
+            color: rgb(123,136,146);
+        }
+        .navdiv{
+            display: block;
+        }
+        .middown{
+            margin: auto;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            place-content: center;
+            padding: 60px 0px 40px 0px;
+        }
+        .bookcage{
+            width: 340px;
+            height: 175px;
+        }
+        .boldtx{
+            font-size: 31px;
+            font-weight: 800;
+            text-align: center;
+        }
+        .thintx{
+            font-size: 15px;
+            font-weight: 400;
+            color: rgb(123,136,146);
+            text-align: center;
+        }
+        .rightuserdiv{
+            padding: 0px 17px 0px 17px;
+        }
+        .rightuserdiv:hover{
+            background-color: rgb(239,241,241);
+        }
+        .userpfp{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .cv{
+            display: flex;
+            align-items: center;
+        }
+        .followbtn{
+            width: 70px;
+            height: 30px;
+            padding: 0px 12px;
+            background-color: rgb(39,44,48);
+            color: white;
+            border: 0px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-left: -20px;
+        }
+        .usern{
+            font-size: 15px;
+            font-weight: 700;
+            color: rgb(15,20,25);
+        }
+        .userusername{
+            color: rgb(83,100,113);
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .showmoreyml{
+            padding: 15px;
+            border-radius: 0px 0px 15px 15px;
+        }
+        .showmoreyml:hover{
+            background-color: rgb(239,241,241);
+        }
+        .searchparent{
+            background-color: rgb(239,243,244);
+            border-radius: 30px 0px 0px 30px;
+            width: 50px;
+            height: 45px;
+            outline: none;
+            border: 0px;
+            font-size: 15px;
+            padding: 11px 20px;
+            color: rgb(83,100,113);
+        }
+        .iptparent{
+            background-color: rgb(239,243,244);
+            border-radius: 0px 30px 30px 0px;
+            width: 300px;
+            height: 45px;
+            outline: none;
+            border: 0px;
+            padding: 10px 4px;
+        }
+        .searchipt{
+            outline: none;
+            border: 0px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: rgb(239,243,244);
+        }
+        .inputparent{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            /* z-index: 2; */
+            /* position: fixed; */
+        }
+        .fixedright{
+            background-color: white;
+            width: 100%;
+            height: 50px;
+            padding: 2px;
+            position: sticky;
+            top: 0;
+            right: 0;
+            /* position: fixed; */
+        }
+        .yml{
+            width: 350px;
+            height: 335px;
+            padding: 5px 0px 0px 0px;
+            background-color: rgb(247,249,249);
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        .h2{
+            padding: 5px 0px 0px 15px;
+            font-size: 22px;
+        }
+        .container5{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .cover1{
+            gap: 90px;
+            padding: 10px 0px;
+        }
+        .cover2{
+            gap: 120px;
+            padding: 10px 0px;
+        }
+        .cover3{
+            gap: 80px;
+            padding: 10px 0px;
+        }
+        .tfy{
+            width: 350px;
+            height: 980px;
+            padding: 5px 0px 0px 0px;
+            background-color: rgb(247,249,249);
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        .trenddiv{
+            padding: 1px 20px 17px 20px;
+        }
+        .trenddiv:hover{
+            background-color: rgb(239,241,2418);
+        }
+        .fade{
+            color: rgb(119,133,143);
+            font-size: 13px;
+            font-size: 400;
+        }
+        .fadeicon{
+            color: rgb(119,133,143);
+            font-size: 20px;
+        }
+        .fadediv{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .hash{
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .notweet{
+            color: rgb(119,133,143);
+            font-size: 13px;
+            font-size: 400;
+        }
+        .footer{
+            width: 300px;
+            font-size: 13px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+        .foot{
+            color: rgb(142,153,161);
+            font-size: 13px;
+        }
+        .hme{
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .hme:hover{
+            background-color: rgb(231,231,232);
+        }
+        .xplore{
+            width: 140px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .xplore:hover{
+            background-color: rgb(231,231,232);
+        }
+        .ntfn{
+            width: 190px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .ntfn:hover{
+            background-color: rgb(231,231,232);
+        }
+        .msgs{
+            width: 160px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .msgs:hover{
+            background-color: rgb(231,231,232);
+        }
+        .book{
+            width: 170px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .book:hover{
+            background-color: rgb(231,231,232);
+        }
+        .prf{
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .prf:hover{
+            background-color: rgb(231,231,232);
+        }
+        .bookcon{
+            font-weight: 900;
+        }
+        .morel{
+            width: 120px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .morel:hover{
+            background-color: rgb(231,231,232);
+        }
+        .ddcontent{
+            background-color: white;
+            height: 330px;
+            width: 320px;
+            border-radius: 10px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 130px;
+            left: 40px;
+            color: black;
+            box-shadow: 2px 5px 10px 1px rgba(128, 128, 128, 0.479);
+            display: none;
+        }
+        .ddparent:focus-within .ddcontent{
+            display: block;
+        }
+        .morebtn{
+            background: none;
+            border: none;
+        }
+        .moreddc{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+        .moreddc2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px 0px 13px 0px;
+        }
+        hr{
+            border: 1px solid rgba(128, 128, 128, 0.096);
+        }
+        .vv{
+            font-size: 20px;
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column left">
+            <div class="logocover">
+                <img src="twitt logo.png" alt="" class="logo">
+            </div>
+            <ul>
+                <a href="twitterhome.html">
+                    <li class="hme">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="vv">Home</span>
+                    </li>
+                </a>
+                <a href="twitterexplore.html">
+                    <li class="xplore">
+                        <span class="material-symbols-outlined">tag</span>
+                        <span class="vv">Explore</span>
+                    </li>
+                </a>
+                <a href="twitternotification.html">
+                    <li class="ntfn">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="vv">Notifications</span>
+                    </li>
+                </a>
+                <a href="twittermessages.html">
+                    <li class="msgs">
+                        <span class="material-symbols-outlined">email</span>
+                        <span class="vv">Messages</span>
+                    </li>
+                </a>
+                <li class="book">
+                    <span class="material-symbols-outlined bookcon">bookmark</span>
+                    <span class="vv">Bookmarks</span>
+                </li>
+                <a href="twitterprofile2.html">
+                    <li class="prf">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="vv">Profile</span>
+                    </li>
+                </a>
+                <div class="ddparent">
+                    <button class="morebtn">
+                        <li class="morel">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                            <span class="vv">More</span>
+                        </li>
+                    </button>
+                    <div class="ddcontent">
+                        <div class="moreddc">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                            <span>Connect</span>
+                        </div>
+                        <div class="moreddc">
+                            <span class="material-symbols-outlined">psychiatry</span>
+                            <span>Drafts</span>
+                        </div>
+                        <div class="moreddc">
+                            <span class="material-symbols-outlined">verified</span>
+                            <span>Verified Orgs</span>
+                        </div>
+                        <hr>
+                        <div class="moreddc2">
+                            <span>Creator Studio</span>
+                            <span><span class="material-symbols-outlined">expand_more</span></span>
+                        </div>
+                        <div class="moreddc2">
+                            <span>Professional Tools</span>
+                            <span><span class="material-symbols-outlined">expand_more</span></span>
+                        </div>
+                        <div class="moreddc2">
+                            <span>Settings and Support</span>
+                            <span><span class="material-symbols-outlined">expand_more</span></span>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <button class="tweetbtn">
+                Tweet
+            </button>
+            <div class="ppparent">
+                <button class="profilepix">
+                    <img src="tao nm.jpg" alt="" class="pfp">
+                    <div class="names">
+                        <p class="name">Tao_pheekah👩🏾‍💻🧕🏾</p>
+                        <p class="username">@tao_codeux</p>
+                    </div>
+                    <span class="material-symbols-outlined more">more_horiz</span>
+                </button>
+                <div class="ppcontent">
+                    <hr>
+                    <div class="ppcover">
+                        <div class="pp">Add an existing account</div>
+                        <a href="index.html"><div class="pp">Log out@tao_codeux</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column mid">
+            <nav class="navdiv">
+                <p class="navname">Bookmarks</p>
+                <p class="navusern">@tao_codeux</p>
+            </nav>
+            <div class="middown">
+                <img src="bookcage.png" alt="" class="bookcage">
+            </div>
+            <div class="boldtx">Save Tweets for later</div>
+            <div class="thintx">Don’t let the good ones fly away! Bookmark <br> Tweets to easily find them again in the future.</div>          
+        </div>
+        <div class="column right">
+            <div class="fixedright">
+                <div class="inputparent">
+                    <div class="searchparent">
+                        <i class="icofont-search-1"></i>
+                    </div>
+                    <div class="iptparent">
+                        <input type="search" name="search" id="search" placeholder="Search Twitter" class="searchipt">
+                    </div>
+                </div>
+            </div>
+            <div class="yml">
+                <div>
+                    <h2 class="h2">You might like</h2>
+                </div>
+                <div class="container5 rightuserdiv">
+                    <div><img src="ui faces.jpg" alt="" class="userpfp"></div>
+                    <div class="cv cover1">
+                        <div>
+                            <div class="usern">Davido</div>
+                            <span class="userusername">@Davidooifficial</span>
+                        </div>
+                        <div><button class="followbtn">Follow</button></div>
+                    </div>
+                </div>
+                <div class="container5 rightuserdiv">
+                    <div><img src="ui faces 6.jpg" alt="" class="userpfp"></div>
+                    <div class="cv cover2">
+                        <div>
+                            <div class="usern">MONKELE</div>
+                            <span class="userusername">@_Taaooma</span>
+                        </div>
+                        <div><button class="followbtn">Follow</button></div>
+                    </div>
+                </div>
+                <div class="container5 rightuserdiv">
+                    <div><img src="ui faces 7.png" alt="" class="userpfp"></div>
+                    <div class="cv cover3">
+                        <div>
+                            <div class="usern">MBAH</div>
+                            <span class="userusername">@Mbahdeyforyou</span>
+                        </div>
+                        <div><button class="followbtn">Follow</button></div>
+                    </div>
+                </div>
+                <div class="showmoreyml">
+                    <a href="">Show more</a>
+                </div>
+            </div>
+            <div class="tfy">
+                <div>
+                    <h2 class="h2">Trends for you</h2>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">#TiwaKingsCoronation</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Tems</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Drake</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Lauren</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Ogun State</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">THABANGOFLAGOS</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">On a Monday</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">#Ngerian Idol</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">#Burnaboy</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Grammy</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="showmoreyml">
+                    <a href="">Show more</a>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="" class="foot">Terms of Service</a>
+                <a href="" class="foot">Privacy Policy</a>
+                <a href="" class="foot">Cookie Policy</a>
+                <a href="" class="foot">Accessibility</a>
+                <a href="" class="foot">Ads info</a>
+                <a href="" class="foot">More <span class="material-symbols-outlined fadeicon">more_horiz</span></a>
+                <span>© 2023 X Corp.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

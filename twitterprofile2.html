@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profilepage</title>
+    <link rel="stylesheet" href="../icofont/icofont.min.css">
+    <link rel="icon" href="twitt logo.png" sizes="16px">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* outline: 2px solid red; */
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .a {
+            color: rgb(29, 155, 240);
+            text-decoration: none;
+        }
+        .aa {
+            font-weight: 700;
+            color: rgb(15, 20, 25);
+            text-decoration: none;
+        }
+        .aa:hover{
+            text-decoration: underline;
+        }
+        .foot:hover{
+            text-decoration: underline;
+        }
+        .hashtag:hover{
+            text-decoration: underline;
+        }
+        .colorg {
+            color: rgb(102, 117, 129);
+        }
+        .hashtag2 {
+            /* color: rgb(142, 153, 161); */
+            text-decoration: none;
+        }
+        .hashtag2:hover {
+            text-decoration: underline;
+        }
+        .colorb{
+            color: rgb(15,20,25);
+        }
+        .row{
+            display: flex;
+        }
+        .column{
+            display: inline-block;
+            justify-content: center;
+        }
+        .left{
+            background-color: white;
+            width: 23%;
+            height: 650px;
+            padding: 10px 20px 0px 60px;
+            border-right: 1px solid rgb(239,243,244);
+            float: left;
+            position: sticky;
+            left: 0px;
+            top: 0;
+        }
+        .mid{
+            background-color: white;
+            width: 44%;
+            height: 100%;
+        }
+        .right{
+            background-color: white;
+            width: 33%;
+            height: 100%;
+            border-left: 1px solid rgb(239,243,244);
+        }
+        .logo{
+            width: 30px;
+            height: 30px;
+        }
+        .logocover{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: none;
+            padding: 11px;
+        }
+        .logocover:hover{
+            background-color: rgb(231,231,232);
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 22px;
+            margin-top: 7px;
+        }
+        .tweetbtn{
+            width: 220px;
+            height: 50px;
+            padding: 10px;
+            background-color: rgb(29,155,240);
+            border: 0px;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .tweetbtn:hover{
+            background-color: rgb(26,140,216);
+        }
+        .pfp{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .profilepix {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+            width: 235px;
+            height: 60px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+            border: none;
+        }
+        .profilepix:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .ppcontent{
+            background-color: white;
+            height: 120px;
+            width: 290px;
+            border-radius: 10px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 410px;
+            left: 30px;
+            color: black;
+            box-shadow: 2px 5px 10px 1px rgba(128, 128, 128, 0.479);
+            display: none;
+        }
+        .ppparent:focus-within .ppcontent{
+            display: block;
+        }
+        .pp{
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .ppcover{
+            display: grid;
+            gap: 25px;
+            padding: 20px;
+        }
+        .names{
+            display: inline-flex;
+            flex-direction: column;
+        }
+        .username{
+            color: rgb(123,136,146);
+        }
+        .name{
+            font-weight: 600;
+            width: 140px;
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            /* border-bottom: 1px solid rgb(239,243,244); */
+            padding: 10px;
+            display: inline-flex;
+            gap: 30px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: rgba(245, 246, 247, 0.301);
+            backdrop-filter: blur(10px) ;
+        }
+        .navname{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .coverpfp{
+            width: 100%;
+            height: 200px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: flex-start;
+            
+        }
+        .pfp2{
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            outline: 4px solid white;
+            border: 0px;
+            margin-top: -80px;
+        }
+        .btn2{
+            width: 120px;
+            height: 37px;
+            padding: 5px;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 30px;
+            background-color: white;
+            border: 1px solid rgb(207,217,222);
+            margin-top: -10px;
+        }
+        .btn2:hover{
+            background-color: rgb(231,231,232);
+        }
+        .midname{
+            padding:0px 15px;
+        }
+        .midnm{
+            font-weight: 700;
+            color: rgb(15,20,25);
+            font-size: 20px;
+        }
+        .midusername{
+            color: rgb(123,136,146);
+            font-size: 15px;
+        }
+        .bio{
+            color: rgb(112,115,118);
+            padding: 15px 0px 0px 20px;
+        }
+        .hashtag{
+            color: rgb(29,155,240);
+        }
+        .container2{
+            display: inline-flex;
+            color: rgb(142,153,161);
+            gap: 20px;
+            align-items: center;
+            padding: 10px 0px 0px 15px;
+        }
+        .info{
+            display: inline-flex;
+            gap: 3px;
+            align-items: center;
+        }
+        .container3{
+            display: inline-flex;
+            color: black;
+            gap: 20px;
+            font-weight: 500;
+            padding: 5px 20px 0px 20px;
+        }
+        .ul2{
+            padding: 10px;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: -15px;
+        }
+        .highli{
+            color: black;
+            display: inline-flex;
+            font-size: 15px;
+            font-weight: 500;
+            width: 150px;
+            height: 50px;
+            background: none;
+            padding: 10px 50px;
+        }
+        .li2{
+            display: inline-flex;
+            font-size: 15px;
+            font-weight: 500;
+            width: 150px;
+            height: 50px;
+            background: none;
+            padding: 10px 50px;
+            color: rgb(117,130,141);
+            /* margin: 0px 0px -5px -50px; */
+        }
+        .li2:hover{
+            background-color: rgb(231,231,232);
+        }
+        .highli:hover{
+            background-color: rgb(231,231,232);
+        }
+        .line{
+            background-color: rgb(29,155,240);
+            width: 55px;
+            height: 4px;
+            border-radius: 30px;
+            margin: 0px 0px 0px 45px;
+        }
+        hr{
+            border: 0.5px solid rgb(239,243,244);
+        }
+        .h1{
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 0px 0px 20px;
+        }
+        .userdiv{
+            padding: 15px;
+        }
+        .rightuserdiv{
+            padding: 0px 17px 0px 17px;
+        }
+        .rightuserdiv:hover{
+            background-color: rgb(239,241,241);
+        }
+        .userdiv:hover{
+            background-color: rgb(247,247,247);
+        }
+        .userpfp{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .container5{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .cv{
+            display: flex;
+            align-items: center;
+        }
+        .followbtn{
+            width: 70px;
+            height: 30px;
+            padding: 0px 12px;
+            background-color: rgb(39,44,48);
+            color: white;
+            border: 0px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-left: -20px;
+        }
+        .usern{
+            font-size: 15px;
+            font-weight: 700;
+            color: rgb(15,20,25);
+        }
+        .userusername{
+            color: rgb(83,100,113);
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .userbio{
+            width: 450px;
+            color: rgb(15, 20, 25);
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .nameparent{
+            position: relative;
+        }
+        .nameparent:hover .namecontent{
+            display: block;
+        }
+        .namecontent{
+            width: 300px;
+            height: 270px;
+            background-color: white;
+            position: absolute;
+            right: 250px;
+            top: 30px;
+            border-radius: 20px;
+            box-shadow: 2px 5px 10px 1px rgba(128, 128, 128, 0.479);
+            padding: 15px;
+            display: none;
+        }
+        .btn2cover{
+            display: grid;
+            justify-content: right;
+            /* padding: 15px; */
+        }
+        .avatar-stack {
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: -10px;
+            outline: 2px solid white;
+        }
+        .avatardiv{
+            display: flex;
+            align-items: center;
+            justify-content: first baseline;
+            gap: 10px;
+            padding: 8px;
+        }
+        .size{
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 400;
+        }
+        .grey{
+            color: rgb(123,136,146);
+        }
+        .ffwersdiv{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .ffwersdiv:hover{
+            text-decoration: underline;
+        }
+        .righthover{
+            display: grid;
+            justify-content: left;
+            align-items: center;
+        }
+        .btnhover{
+            width: 100px;
+            height: 37px;
+            padding: 5px;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 30px;
+            background-color: white;
+            border: 1px solid rgb(207,217,222);
+            position: relative;
+            /* margin-top: -10px; */
+        }
+        .btnhover::before{
+            content: "";
+        }
+        .btnhover::after{
+            content: "unfollow";
+            color: red;
+            background-color: rgb(254,232,234);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            border: 1px solid rgb(207,217,222);
+            left: 0;
+            top: 0;
+            /* display: grid; */
+            /* justify-content: center; */
+            align-items: center;
+            display: none;
+        }
+        .btnhover:hover::after{
+            display: grid;
+        }
+        .showmore{
+            padding: 15px;
+        }
+        .showmore:hover{
+            background-color: rgb(247,247,247);
+        }
+        .showmoreyml{
+            padding: 15px;
+            border-radius: 0px 0px 15px 15px;
+        }
+        .showmoreyml:hover{
+            background-color: rgb(239,241,241);
+        }
+        .searchparent{
+            background-color: rgb(239,243,244);
+            border-radius: 30px 0px 0px 30px;
+            width: 50px;
+            height: 45px;
+            outline: none;
+            border: 0px;
+            font-size: 15px;
+            padding: 11px 20px;
+            color: rgb(83,100,113);
+        }
+        .iptparent{
+            background-color: rgb(239,243,244);
+            border-radius: 0px 30px 30px 0px;
+            width: 300px;
+            height: 45px;
+            outline: none;
+            border: 0px;
+            padding: 10px 4px;
+        }
+        .searchipt{
+            outline: none;
+            border: 0px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: rgb(239,243,244);
+        }
+        .inputparent{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            /* z-index: 2; */
+            /* position: fixed; */
+        }
+        .fixedright{
+            background-color: white;
+            width: 100%;
+            height: 50px;
+            padding: 2px;
+            position: sticky;
+            top: 0;
+            right: 0;
+            /* position: fixed; */
+        }
+        .yml{
+            width: 350px;
+            height: 335px;
+            padding: 5px 0px 0px 0px;
+            background-color: rgb(247,249,249);
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        .h2{
+            padding: 5px 0px 0px 15px;
+            font-size: 22px;
+        }
+        .cover1{
+            gap: 90px;
+            padding: 10px 0px;
+        }
+        .cover2{
+            gap: 120px;
+            padding: 10px 0px;
+        }
+        .cover3{
+            gap: 80px;
+            padding: 10px 0px;
+        }
+        .tfy{
+            width: 350px;
+            height: 980px;
+            padding: 5px 0px 0px 0px;
+            background-color: rgb(247,249,249);
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        .trenddiv{
+            padding: 1px 20px 17px 20px;
+        }
+        .trenddiv:hover{
+            background-color: rgb(239,241,2418);
+        }
+        .fade{
+            color: rgb(119,133,143);
+            font-size: 13px;
+            font-size: 400;
+        }
+        .fadeicon{
+            color: rgb(119,133,143);
+            font-size: 20px;
+        }
+        .fadediv{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .hash{
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .notweet{
+            color: rgb(119,133,143);
+            font-size: 13px;
+            font-size: 400;
+        }
+        .footer{
+            width: 300px;
+            font-size: 13px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+        .foot{
+            color: rgb(142,153,161);
+            font-size: 13px;
+        }
+        .hme{
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .hme:hover{
+            background-color: rgb(231,231,232);
+        }
+        .xplore{
+            width: 140px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .xplore:hover{
+            background-color: rgb(231,231,232);
+        }
+        .ntfn{
+            width: 190px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .ntfn:hover{
+            background-color: rgb(231,231,232);
+        }
+        .msgs{
+            width: 160px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .msgs:hover{
+            background-color: rgb(231,231,232);
+        }
+        .book{
+            width: 170px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .book:hover{
+            background-color: rgb(231,231,232);
+        }
+        .prf{
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .prf:hover{
+            background-color: rgb(231,231,232);
+        }
+        .prfcon{
+            font-weight: 700;
+        }
+        .morel{
+            width: 120px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .morel:hover{
+            background-color: rgb(231,231,232);
+        }
+        .ddcontent{
+            background-color: white;
+            height: 330px;
+            width: 320px;
+            border-radius: 10px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 130px;
+            left: 40px;
+            color: black;
+            box-shadow: 2px 5px 10px 1px rgba(128, 128, 128, 0.479);
+            display: none;
+        }
+        .ddparent:focus-within .ddcontent{
+            display: block;
+        }
+        .morebtn{
+            background: none;
+            border: none;
+        }
+        .moreddc{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+        .moreddc2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px 0px 13px 0px;
+        }
+        hr{
+            border: 1px solid rgba(128, 128, 128, 0.096);
+        }
+        .vv{
+            font-size: 20px;
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column left">
+            <div class="logocover">
+                <img src="twitt logo.png" alt="" class="logo">
+            </div>
+            <ul>
+                <a href="twitterhome.html">
+                    <li class="hme">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="vv">Home</span>
+                    </li>
+                </a>
+                <a href="twitterexplore.html">
+                    <li class="xplore">
+                        <span class="material-symbols-outlined">tag</span>
+                        <span class="vv">Explore</span>
+                    </li>
+                </a>
+                <a href="twitternotification.html">
+                    <li class="ntfn">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="vv">Notifications</span>
+                    </li>
+                </a>
+                <a href="twittermessages.html">
+                    <li class="msgs">
+                        <span class="material-symbols-outlined">email</span>
+                        <span class="vv">Messages</span>
+                    </li>
+                </a>
+                <a href="twitterbookmark.html">
+                    <li class="book">
+                        <span class="material-symbols-outlined">bookmark</span>
+                        <span class="vv">Bookmarks</span>
+                    </li>
+                </a>
+                <li class="prf">
+                    <span class="material-symbols-outlined prfcon">person</span>
+                    <span class="vv">Profile</span>
+                </li>
+                <div class="ddparent">
+                    <button class="morebtn">
+                        <li class="morel">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                            <span class="vv">More</span>
+                        </li>
+                    </button>
+                    <div class="ddcontent">
+                        <div class="moreddc">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                            <span>Connect</span>
+                        </div>
+                        <div class="moreddc">
+                            <span class="material-symbols-outlined">psychiatry</span>
+                            <span>Drafts</span>
+                        </div>
+                        <div class="moreddc">
+                            <span class="material-symbols-outlined">verified</span>
+                            <span>Verified Orgs</span>
+                        </div>
+                        <hr>
+                        <div class="moreddc2">
+                            <span>Creator Studio</span>
+                            <span><span class="material-symbols-outlined">expand_more</span></span>
+                        </div>
+                        <div class="moreddc2">
+                            <span>Professional Tools</span>
+                            <span><span class="material-symbols-outlined">expand_more</span></span>
+                        </div>
+                        <div class="moreddc2">
+                            <span>Settings and Support</span>
+                            <span><span class="material-symbols-outlined">expand_more</span></span>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <button class="tweetbtn">
+                Tweet
+            </button>
+            <div class="ppparent">
+                <button class="profilepix">
+                    <img src="tao nm.jpg" alt="" class="pfp">
+                    <div class="names">
+                        <p class="name">Tao_pheekah👩🏾‍💻🧕🏾</p>
+                        <p class="username">@tao_codeux</p>
+                    </div>
+                    <span class="material-symbols-outlined more">more_horiz</span>
+                </button>
+                <div class="ppcontent">
+                    <hr>
+                    <div class="ppcover">
+                        <div class="pp">Add an existing account</div>
+                        <a href="index.html"><div class="pp">Log out@tao_codeux</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column mid">
+            <nav>
+                <span class="material-symbols-outlined">keyboard_backspace</span>
+                <div class="navdiv">
+                    <p class="navname">Tao_pheekah👩🏾‍💻🧕🏾</p>
+                    <p class="navpu">1 Tweet</p>
+                </div>
+            </nav>
+            <img src="coverpfp.jpeg" alt="" class="coverpfp">
+            <div class="container">
+                <img src="tao nm.jpg" alt="" class="pfp2">
+                <button class="btn2">Edit profile</button>
+            </div>
+            <div class="midname">
+                <p class="midnm">Tao_pheekah👩🏾‍💻🧕🏾</p>
+                <p class="midusername">@tao_codeux</p>
+            </div>
+            <p class="bio">UX/UI Designer| Frontend Developer|<a href="" class="hashtag">#womenintech</a>| Microbiology Graduate👩🏾‍🎓| Small business owner</p>
+            <div class="container2">
+                <div class="location info">
+                    <span class="material-symbols-outlined">location_on</span>
+                    Ibadan, Nigeria
+                </div>
+                <div class="dob info">
+                    <span class="material-symbols-outlined">self_care</span>
+                    Born March 13, 2005
+                </div>
+                <div class="joined info">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    Joined June 2022
+                </div>
+            </div>
+            <div class="container3">
+                <div class="fff">
+                    <a class="hashtag2"><span class="colorb">20</span> Following</a>
+                </div>
+                <div class="fff">
+                    <a class="hashtag2"><span class="colorb">3</span> Followers</a>
+                </div>
+            </div>
+            <ul class="ul2">
+                <li class="highli">Tweets</li>
+                <li class="li2">Replies</li>
+                <li class="li2">Media</li>
+                <li class="li2">Likes</li>
+            </ul>
+            <div class="line"></div>
+            <hr>
+            <p class="h1">Who to follow</p>
+            <div class="userdiv">
+                <div class="container5">
+                    <img src="ui faces 6.jpg" alt="" class="userpfp">
+                    <div class="cv">
+                        <div class="sec">
+                            <div class="nameparent">
+                                <div class="namefirst">
+                                    <p class="usern">Ogbeni Dipo</p>
+                                    <p class="userusername">@OgbeniDipo</p>
+                                </div>
+                                <div class="namecontent">
+                                    <div class="btn2cover">
+                                        <button class="followbtn">Follow</button>
+                                    </div>
+                                    <div class="righthover">
+                                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                                        <b><a href="#" class="hashtag2">Ogbeni Dipo</a></b>
+                                        <span class="colorg">@OgbeniDipo</span>
+                                    </div>
+                                    <p>Observational Humor | Sales Professional |</p>
+                                    <div class="ffwersdiv">
+                                        <a href="#"><b>456</b><span class="grey"> Following</span></a>
+                                        <a href="#"><b>18.4k</b><span class="grey"> Followers</span></a>
+                                    </div>
+                                    <div class="avatardiv">
+                                        <div class="avatar-stack">
+                                            <img src="uifaces12.jpg" alt="Avatar 1" class="avatar">
+                                            <img src="ui faces 7.png" alt="Avatar 2" class="avatar">
+                                            <img src="ui faces.jpg" alt="Avatar 2" class="avatar">
+                                        </div>
+                                        <a href="#" class="grey size">Followed by nana, OMALICHA, UI/UX and 3 others you follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="userbio">Architect in embryo|a believer |No SUM🥹| <a href="#" class="hashtag">@ChelseaFC 💙</a>.</p>
+                        </div>
+                        <button class="followbtn">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="userdiv">
+                <div class="container5">
+                    <img src="ui faces 7.png" alt="" class="userpfp">
+                    <div class="cv">
+                        <div class="sec">
+                            <div class="nameparent">
+                                <div class="namefirst">
+                                    <p class="usern">Ogbeni Dipo</p>
+                                    <p class="userusername">@OgbeniDipo</p>
+                                </div>
+                                <div class="namecontent">
+                                    <div class="btn2cover">
+                                        <button class="followbtn">Follow</button>
+                                    </div>
+                                    <div class="righthover">
+                                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                                        <b><a href="#" class="hashtag2">Ogbeni Dipo</a></b>
+                                        <span class="colorg">@OgbeniDipo</span>
+                                    </div>
+                                    <p>Observational Humor | Sales Professional |</p>
+                                    <div class="ffwersdiv">
+                                        <a href="#"><b>456</b><span class="grey"> Following</span></a>
+                                        <a href="#"><b>18.4k</b><span class="grey"> Followers</span></a>
+                                    </div>
+                                    <div class="avatardiv">
+                                        <div class="avatar-stack">
+                                            <img src="uifaces12.jpg" alt="Avatar 1" class="avatar">
+                                            <img src="ui faces 7.png" alt="Avatar 2" class="avatar">
+                                            <img src="ui faces.jpg" alt="Avatar 2" class="avatar">
+                                        </div>
+                                        <a href="#" class="grey size">Followed by nana, OMALICHA, UI/UX and 3 others you follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="userbio">Architect in embryo|a believer |No SUM🥹| <a href="#">@ChelseaFC 💙</a>.</p>
+                        </div>
+                        <button class="followbtn">Follow</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="userdiv">
+                <div class="container5">
+                    <img src="ui faces.jpg" alt="" class="userpfp">
+                    <div class="cv">
+                        <div class="sec">
+                            <div class="nameparent">
+                                <div class="namefirst">
+                                    <p class="usern">Ogbeni Dipo</p>
+                                    <p class="userusername">@OgbeniDipo</p>
+                                </div>
+                                <div class="namecontent">
+                                    <div class="btn2cover">
+                                        <button class="followbtn">Follow</button>
+                                    </div>
+                                    <div class="righthover">
+                                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                                        <b><a href="#" class="hashtag2">Ogbeni Dipo</a></b>
+                                        <span class="colorg">@OgbeniDipo</span>
+                                    </div>
+                                    <p>Observational Humor | Sales Professional |</p>
+                                    <div class="ffwersdiv">
+                                        <a href="#"><b>456</b><span class="grey"> Following</span></a>
+                                        <a href="#"><b>18.4k</b><span class="grey"> Followers</span></a>
+                                    </div>
+                                    <div class="avatardiv">
+                                        <div class="avatar-stack">
+                                            <img src="uifaces12.jpg" alt="Avatar 1" class="avatar">
+                                            <img src="ui faces 7.png" alt="Avatar 2" class="avatar">
+                                            <img src="ui faces.jpg" alt="Avatar 2" class="avatar">
+                                        </div>
+                                        <a href="#" class="grey size">Followed by nana, OMALICHA, UI/UX and 3 others you follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="userbio">Architect in embryo|a believer |No SUM🥹| <a href="#">@ChelseaFC 💙</a>.</p>
+                        </div>
+                        <button class="followbtn">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="showmore">
+                <a href="">Show more</a>
+            </div>
+        </div>
+        <div class="column right">
+            <div class="fixedright">
+                <div class="inputparent">
+                    <div class="searchparent">
+                        <i class="icofont-search-1"></i>
+                    </div>
+                    <div class="iptparent">
+                        <input type="search" name="search" id="search" placeholder="Search Twitter" class="searchipt">
+                    </div>
+                </div>
+            </div>
+            <div class="yml">
+                <div>
+                    <h2 class="h2">You might like</h2>
+                </div>
+                <div class="container5 rightuserdiv">
+                    <div><img src="ui faces.jpg" alt="" class="userpfp"></div>
+                    <div class="cv cover1">
+                        <div>
+                            <div class="usern">Davido</div>
+                            <span class="userusername">@Davidooifficial</span>
+                        </div>
+                        <div><button class="followbtn">Follow</button></div>
+                    </div>
+                </div>
+                <div class="container5 rightuserdiv">
+                    <div><img src="ui faces 6.jpg" alt="" class="userpfp"></div>
+                    <div class="cv cover2">
+                        <div>
+                            <div class="usern">MONKELE</div>
+                            <span class="userusername">@_Taaooma</span>
+                        </div>
+                        <div><button class="followbtn">Follow</button></div>
+                    </div>
+                </div>
+                <div class="container5 rightuserdiv">
+                    <div><img src="ui faces 7.png" alt="" class="userpfp"></div>
+                    <div class="cv cover3">
+                        <div>
+                            <div class="usern">MBAH</div>
+                            <span class="userusername">@Mbahdeyforyou</span>
+                        </div>
+                        <div><button class="followbtn">Follow</button></div>
+                    </div>
+                </div>
+                <div class="showmoreyml">
+                    <a href="">Show more</a>
+                </div>
+            </div>
+            <div class="tfy">
+                <div>
+                    <h2 class="h2">Trends for you</h2>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">#TiwaKingsCoronation</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Tems</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Drake</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Lauren</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Ogun State</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">THABANGOFLAGOS</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">On a Monday</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">#Ngerian Idol</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Music · Trending</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">#Burnaboy</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="trenddiv">
+                    <div class="fadediv">
+                        <span class="fade">Trending in Nigeria</span>
+                        <span class="material-symbols-outlined fadeicon">more_horiz</span>
+                    </div>
+                    <div class="hash">Grammy</div>
+                    <div class="notweet">4,208 Tweets</div>
+                </div>
+                <div class="showmoreyml">
+                    <a href="">Show more</a>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="" class="foot">Terms of Service</a>
+                <a href="" class="foot">Privacy Policy</a>
+                <a href="" class="foot">Cookie Policy</a>
+                <a href="" class="foot">Accessibility</a>
+                <a href="" class="foot">Ads info</a>
+                <a href="" class="foot">More <span class="material-symbols-outlined fadeicon">more_horiz</span></a>
+                <span>© 2023 X Corp.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstexplore</title>
+    <link rel="stylesheet" href="../icofont/icofont.min.css">
+    <link rel="icon" href="twitt logo.png" sizes="16px">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* outline: 2px solid red; */
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .link{
+            color: rgb(29, 155, 240);
+            text-decoration: none;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+        .a {
+            color: rgb(29, 155, 240);
+            text-decoration: none;
+        }
+        .aa {
+            font-weight: 700;
+            color: rgb(15, 20, 25);
+            text-decoration: none;
+        }
+        .aa:hover{
+            text-decoration: underline;
+        }
+        .foot:hover {
+            text-decoration: underline;
+        }
+        .hashtag:hover {
+            text-decoration: underline;
+        }
+        .hashtag2 {
+            color: rgb(142, 153, 161);
+            text-decoration: none;
+        }
+        .hashtag2:hover {
+            text-decoration: underline;
+        }
+        .colorb {
+            color: rgb(15, 20, 25);
+        }
+        .row {
+            display: inline-flex;
+            position: relative;
+        }
+        .column {
+            display: inline;
+            justify-content: center;
+        }
+        .left {
+            background-color: white;
+            width: 23%;
+            height: 650px;
+            padding: 10px 20px 0px 60px;
+            border-right: 1px solid rgb(239, 243, 244);
+            float: left;
+            position: sticky;
+            left: 0px;
+            top: 0;
+        }
+        .mid {
+            background-color: white;
+            width: 44%;
+            height: 100%;
+        }
+        .right {
+            background-color: white;
+            width: 33%;
+            height: 100%;
+            border-left: 1px solid rgb(239, 243, 244);
+            position: sticky;
+            right: 0px;
+            top: 0px;
+            padding: 10px 0px;
+        }
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+        .logocover {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: none;
+            padding: 11px;
+        }
+        .logocover:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 22px;
+            margin-top: 7px;
+        }
+        .tweetbtn {
+            width: 220px;
+            height: 50px;
+            padding: 10px;
+            background-color: rgb(29, 155, 240);
+            border: 0px;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .tweetbtn:hover {
+            background-color: rgb(26, 140, 216);
+        }
+        .pfp {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .profilepix {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+            width: 235px;
+            height: 60px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .profilepix:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .names {
+            display: inline-flex;
+            flex-direction: column;
+        }
+        .username {
+            color: rgb(123, 136, 146);
+        }
+        .name {
+            font-weight: 600;
+            width: 140px;
+        }
+        nav {
+            width: 100%;
+            height: 50px;
+            /* border-bottom: 1px solid rgb(239, 243, 244); */
+            /* padding: 10px 15px; */
+            /* display: inline-flex; */
+            /* gap: 30px; */
+            /* align-items: center; */
+            position: sticky;
+            top: 0;
+            background-color: rgba(245, 246, 247, 0.301);
+            backdrop-filter: blur(10px);
+        }
+        .midtop {
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 15px;
+        }
+        .flexmidtop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* gap: 450px; */
+        }
+        .settings{
+            font-size: 20px;
+            padding: 15px;
+        }
+        .midcontainer1 {
+            width: 100%;
+            height: 120px;
+            background-color: white;
+            border-bottom: 1px solid rgb(239, 243, 244)
+        }
+        .que {
+            color: rgb(83, 100, 113);
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .iconsdiv {
+            display: flex;
+            gap: 10px;
+            color: rgb(29, 155, 240);
+        }
+        .ic {
+            font-size: 20px;
+        }
+        .twt {
+            background-color: rgb(142, 205, 247);
+            color: rgb(246, 251, 255);
+            border-radius: 30px;
+            padding: 0px 5px;
+            width: 80px;
+            height: 35px;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .containericon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px 0px 80px;
+        }
+        .showmidcontainer {
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid rgb(239, 243, 244);
+            background-color: white;
+            color: rgb(29, 155, 240);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .showmidcontainer:hover {
+            background-color: rgb(247, 247, 247);
+        }
+        .postdiv {
+            background-color: white;
+            width: 100%;
+            height: 560px;
+            padding: 10px;
+            border-bottom: 1px solid rgb(239, 243, 244);
+        }
+        .postdiv:hover {
+            background-color: rgb(247, 247, 247);
+        }
+        .pdsmall {
+            background-color: white;
+            width: 100%;
+            height: 190px;
+            padding: 10px;
+            border-bottom: 1px solid rgb(239, 243, 244);
+        }
+        .pdsmall:hover {
+            background-color: rgb(247, 247, 247);
+        }
+        .tx {
+            font-size: 15px;
+        }
+        .ctn1 {
+            display: flex;
+            gap: 10px;
+        }
+        .postname {
+            display: flex;
+            align-items: center;
+            gap: 340px;
+        }
+        .colorg {
+            color: rgb(102, 117, 129);
+        }
+        .morediv {
+            color: rgb(102, 117, 129);
+            font-size: 20px;
+        }
+        .postimage {
+            width: 500px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        .postimg {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .postdown {
+            display: block;
+        }
+        .recomm {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .comm {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 400;
+            text-align: start;
+            color: rgb(102, 117, 129);
+        }
+        .comicon {
+            font-size: 20px;
+        }
+        .hoverd {
+            width: 35px;
+            height: 35px;
+            padding: 8px;
+            border-radius: 50%;
+            background: none;
+        }
+        .hoverd:hover {
+            background-color: rgb(225, 238, 246);
+        }
+        .d2:hover {
+            background-color: rgb(222, 241, 235);
+        }
+        .d3:hover {
+            background-color: rgb(247, 224, 235);
+        }
+        .c1:hover {
+            color: rgb(54, 165, 241);
+        }
+        .c2:hover {
+            color: rgb(46, 198, 147);
+        }
+        .c3:hover {
+            color: rgb(248, 115, 177);
+        }
+        .pfpdiv {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            gap: 10px;
+        }
+        .rightuserdiv {
+            padding: 0px 17px 0px 17px;
+        }
+        .rightuserdiv:hover {
+            background-color: rgb(239, 241, 241);
+        }
+        .userdiv:hover {
+            background-color: rgb(247, 247, 247);
+        }
+        .userpfp {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .container5 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .cv {
+            display: flex;
+            align-items: center;
+        }
+        .followbtn {
+            width: 70px;
+            height: 30px;
+            padding: 0px 12px;
+            background-color: rgb(39, 44, 48);
+            color: white;
+            border: 0px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-left: -20px;
+        }
+        .usern {
+            font-size: 15px;
+            font-weight: 700;
+            color: rgb(15, 20, 25);
+        }
+        .userusername {
+            color: rgb(83, 100, 113);
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .showmore {
+            padding: 15px;
+        }
+        .showmore:hover {
+            background-color: rgb(247, 247, 247);
+        }
+        .showmoreyml {
+            padding: 15px;
+            border-radius: 0px 0px 15px 15px;
+        }
+        .showmoreyml:hover {
+            background-color: rgb(239, 241, 241);
+        }
+        .searchparent {
+            background-color: rgb(239, 243, 244);
+            border-radius: 30px 0px 0px 30px;
+            width: 50px;
+            height: 45px;
+            outline: none;
+            border: 0px;
+            font-size: 15px;
+            padding: 11px 20px;
+            color: rgb(83, 100, 113);
+        }
+        .iptparent {
+            background-color: rgb(239, 243, 244);
+            border-radius: 0px 30px 30px 0px;
+            width: 300px;
+            height: 45px;
+            outline: none;
+            border: 0px;
+            padding: 10px 4px;
+        }
+        .searchipt {
+            outline: none;
+            border: 0px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: rgb(239, 243, 244);
+        }
+        .inputparent {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .fixedright {
+            background-color: white;
+            width: 100%;
+            height: 50px;
+            padding: 2px;
+            position: sticky;
+            top: 0;
+            right: 0;
+        }
+        .yml {
+            width: 350px;
+            height: 335px;
+            padding: 5px 0px 0px 0px;
+            background-color: rgb(247, 249, 249);
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        .h2 {
+            padding: 5px 0px 0px 15px;
+            font-size: 22px;
+        }
+        .cover1 {
+            gap: 90px;
+            padding: 10px 0px;
+        }
+        .cover2 {
+            gap: 120px;
+            padding: 10px 0px;
+        }
+        .cover3 {
+            gap: 80px;
+            padding: 10px 0px;
+        }
+        .tfy {
+            width: 350px;
+            height: 990px;
+            padding: 5px 0px 0px 0px;
+            background-color: rgb(247, 249, 249);
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        .trenddiv {
+            padding: 1px 20px 17px 20px;
+        }
+        .trenddiv:hover {
+            background-color: rgb(239, 241, 2418);
+        }
+        .fade {
+            color: rgb(119, 133, 143);
+            font-size: 13px;
+            font-size: 400;
+        }
+        .fadeicon {
+            color: rgb(119, 133, 143);
+            font-size: 20px;
+        }
+        .fadediv {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .hash {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .notweet {
+            color: rgb(119, 133, 143);
+            font-size: 13px;
+            font-size: 400;
+        }
+        .footer {
+            width: 300px;
+            font-size: 13px;
+            margin: auto;
+            margin-bottom: 60px;
+            padding-top: 10px;
+        }
+        .foot {
+            color: rgb(142, 153, 161);
+            font-size: 13px;
+        }
+        .outlinediv{
+            background-color: white;
+            width: 340px;
+            height: 290px;
+            border-radius: 10px;
+            margin: auto;
+            border: 1px solid rgb(239, 243, 244);
+        }
+        .hme {
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .hmecon{
+            font-weight: 700;
+        }
+        .hme:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .xplore {
+            width: 140px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .xplore:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .ntfn {
+            width: 190px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .ntfn:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .msgs {
+            width: 160px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .msgs:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .book {
+            width: 170px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .book:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .prf {
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .prf:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .morel {
+            width: 120px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .morel:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .postvideo{
+            width: 500px;
+            border-radius: 100px;
+            height: 450px;
+        }
+        .ddcontent{
+            background-color: white;
+            height: 330px;
+            width: 320px;
+            border-radius: 10px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 130px;
+            left: 40px;
+            color: black;
+            box-shadow: 2px 5px 10px 1px rgba(128, 128, 128, 0.479);
+            display: none;
+        }
+        .ddparent:hover .ddcontent{
+            display: block;
+        }
+        .moreddc{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+        .moreddc2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px 0px 13px 0px;
+        }
+        hr{
+            border: 1px solid rgba(128, 128, 128, 0.096);
+        }
+        .sets{
+            width: 150px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+        }
+        .sets:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .xplore {
+            width: 140px;
+            height: 50px;
+            border-radius: 30px;
+            background: none;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .xplore:hover {
+            background-color: rgb(231, 231, 232);
+        }
+        .xplorecon{
+            font-weight: 700;
+        }
+        .new{
+            font-size: 22px;
+            font-weight: 700;
+            padding: 10px 15px;
+        }
+        .newgy{
+            font-size: 13px;
+            font-weight: 400;
+            color: rgb(83, 100, 113);
+            padding: 0px 15px 5px 15px;
+        }
+        .cydiv{
+            background-color: white;
+            width: 290px;
+            height: 40px;
+            border-radius: 30px;
+            margin: auto;
+            border: 1px solid rgb(207,217,222);
+            margin-top: 13px;
+            padding: 10px;
+        }
+        .cydiv2{
+            background-color: white;
+            width: 310px;
+            height: 40px;
+            border-radius: 30px;
+            margin: auto;
+            border: 1px solid rgb(207,217,222);
+            margin-top: 30px;
+            padding: 10px;
+        }
+        .gapflex{
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .minedp{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .bld{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .greyy{
+            font-size: 13px;
+            font-weight: 400;
+            color: rgb(137,141,145);
+        }
+        .flexw{
+            display: inline-block;
+            line-height: 14px;
+        }
+        .ggle{
+            width: 20px;
+            height: 20px;
+        }
+        .asd{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .asd:hover{
+            background-color: rgb(248,250,255);
+        }
+        .qwe{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 15px;
+            gap: 5px;
+        }
+        .qwe:hover{
+            background-color: rgb(230,230,230);
+        }
+        .create{
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .create:hover{
+            background-color: rgb(230,230,230);
+        }
+        .last{
+            font-size: 13px;
+            font-size: 400;
+            padding: 15px;
+        }
+        .bottomdiv{
+            width: 100%;
+            height: 70px;
+            background-color: rgb(29,155,240);
+            position: fixed;
+            /* top: 550px; */
+            bottom: 0;
+        }
+        .thick{
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .thin{
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .think{
+            display: inline-block;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* padding-left: 310px; */
+        }
+        .lastbtn{
+            display: inline-flex;
+            gap: 15px;
+            padding-left: 500px;
+            /* justify-content: space-between; */
+            /* justify-content: end; */
+            align-items: center;
+        }
+        .btn1{
+            width: 70px;
+            height: 35px;
+            background: none;
+            border: 1px solid white;
+            border-radius: 50px;
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            position: relative;
+        }
+        .btn1:hover{
+            background-color: rgb(52,165,242);
+        }
+        .overlay{
+            width: 100%;
+            height: 620px;
+            background-color: rgba(153, 153, 153, 0.603);
+            right: 0px;
+            bottom: 0px; 
+            position: absolute;
+            display: none;
+        }
+        .btn1parent:focus-within .overlay{
+            display: block;
+        }
+        .btn1content{
+            width: 600px;
+            height: 560px;
+            border-radius: 15px;
+            background-color: white;
+            position: absolute;
+            right: 375px;
+            bottom: 30px;
+        }
+        .btn2{
+            width: 85px;
+            height: 35px;
+            background-color: white;
+            border: none;
+            border-radius: 50px;
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .btn2:hover{
+            background-color: rgb(215,219,220);
+        }
+        .containerdown{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 310px;
+            /* position: absolute;
+            right: 200px; */
+        }
+        .canlogo{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signhead{
+            font-size: 31px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .ordiv{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 10px;
+        }
+        .lineor{
+            width: 130px;
+            height: 1px;
+            background-color: rgb(207,217,222);
+            margin-top: 25px;
+        }
+        #email{
+            width: 300px;
+            height: 50px;
+            margin-top: 20px;
+            border: 1px solid rgb(207,217,222);
+            border-radius: 3px;
+            padding: 10px;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .emailipt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #subtn{
+            width: 300px;
+            height: 35px;
+            background-color: black;
+            border-radius: 30px;
+            border: none;
+            margin-top: 20px;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        #subtn:hover{
+            background-color: rgb(39,44,48);
+        }
+        .subtn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin: auto; */
+        }
+        #subtn2{
+            width: 300px;
+            height: 35px;
+            background-color: white;
+            border-radius: 30px;
+            border: 1px solid rgb(207,217,222);
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.767);
+            font-weight: 700;
+            font-size: 15px;
+        }
+        #subtn2:hover{
+            background-color: rgb(231,231,232);
+            color: rgb(103,106,109);
+        }
+        .subtn2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin: auto; */
+        }
+        .p{
+            font-size: 15px;
+            font-weight: 400;
+            color: rgb(103,118,129);
+        }
+        .plast{
+            padding: 55px 0px 0px 150px
+            /* text-align: center; */
+        }
+        .vv{
+            font-size: 20px;
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column left">
+            <div class="logocover">
+                <img src="twitt logo.png" alt="" class="logo">
+            </div>
+            <ul>
+                <li class="xplore">
+                    <span class="material-symbols-outlined xplorecon">tag</span>
+                    <span class="vv">Explore</span>
+                </li>
+                <a href="#">
+                    <li class="sets">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="vv">Settings</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="column mid">
+            <nav>
+                <div class="flexmidtop">
+                    <div class="midtop">Explore</div>
+                    <span class="material-symbols-outlined settings">settings</span>
+                </div>
+            </nav>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces carton.jpeg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR
+                                    <a href="" class="hashtag2"> 2h</a>
+                                </div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>We found the picture.</span>
+                        </div>
+                        <div class="postimg">
+                            <img src="Fw1dfGMWwBUgsKB.jpeg" alt="" class="postimage">
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces carton.jpeg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>Lagosians, Where is this?</span>
+                        </div>
+                        <div class="postvideo">
+                            <video class="postimage"  autoplay src="https://mazwai.com/videvo_files/video/free/2014-11/small_watermarked/matt_devir--one_minute_drive_preview.webm"></video>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces carton.jpeg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>Lagosians, Where is this?</span>
+                        </div>
+                        <div class="postimg">
+                            <img src="Fv1TZYKWYAAcBTL.jpeg" alt="" class="postimage">
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces carton.jpeg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>Lagosians, Where is this?</span>
+                        </div>
+                        <div class="postimg">
+                            <img src="Fv1TZYKWYAAcBTL.jpeg" alt="" class="postimage">
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces carton.jpeg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>Lagosians, Where is this?</span>
+                        </div>
+                        <div class="postimg">
+                            <img src="Fv1TZYKWYAAcBTL.jpeg" alt="" class="postimage">
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces carton.jpeg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>Lagosians, Where is this?</span>
+                        </div>
+                        <div class="postimg">
+                            <img src="Fv1TZYKWYAAcBTL.jpeg" alt="" class="postimage">
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pdsmall">
+                <div class="ctn1">
+                    <div>
+                        <img src="uifaces12.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span class="tx">If you need PAID INTERNSHIPS with international firms that allows you to
+                                work remotely, kindly SIGNIFY your interest.
+                                I’ll be dropping a well detailed thread on how to get one. <br><br> Reply, RT, and check
+                                back. I’ll reply all comments
+                            </span>
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="postdiv">
+                <div class="ctn1">
+                    <div>
+                        <img src="ui faces 6.jpg" alt="" class="userpfp">
+                    </div>
+                    <div class="postdown">
+                        <div>
+                            <div class="postname">
+                                <div class="colorg"><a href="" class="aa">Naija</a> @Naija_PR·<a href=""
+                                        class="hashtag2"> 2h</a></div>
+                                <span class="material-symbols-outlined more morediv">more_horiz</span>
+                            </div>
+                            <span>Lagosians, Where is this?</span>
+                        </div>
+                        <div class="postimg">
+                            <img src="Fv1TZYKWYAAcBTL.jpeg" alt="" class="postimage">
+                        </div>
+                        <div class="recomm">
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">quick_phrases</span>
+                                </div>
+                                1,900
+                            </div>
+                            <div class="comm c2">
+                                <div class="hoverd d2"><span class="material-symbols-outlined comicon">sync</span></div>
+                                3,202
+                            </div>
+                            <div class="comm c3">
+                                <div class="hoverd d3"><span class="material-symbols-outlined comicon">favorite</span>
+                                </div>
+                                23.6k
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">graphic_eq</span>
+                                </div>
+                                2M
+                            </div>
+                            <div class="comm c1">
+                                <div class="hoverd"><span class="material-symbols-outlined comicon">upload</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="column right">
+            <div class="outlinediv">
+                <p class="new">New to Twitter?</p>
+                <p class="newgy">Sign up now to get your own personalized timeline!</p>
+                <div class="cydiv asd">
+                    <div class="gapflex">
+                        <img src="tao nm.jpg" alt="" class="minedp">
+                        <div class="flexw">
+                            <p class="bld">Sign in as Taofeekat</p>
+                            <p class="greyy">taofeekatb1@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="google icon.png" alt="" class="ggle">
+                </div>
+                <div class="cydiv qwe">
+                    <i class="icofont-brand-apple"></i>
+                    <p>Sign up with Apple</p>
+                </div>
+                <div class="cydiv create">
+                    Create account
+                </div>
+                <div class="last">
+                    By signing up, you agree to the <a href="" class="link">Terms of Service</a> and <a href="" class="link">Privacy Policy</a>, including <a href="" class="link">Cookie Use</a>.
+                </div>
+            </div>
+            <div class="footer">
+                <a href="" class="foot">Terms of Service</a>
+                <a href="" class="foot">Privacy Policy</a>
+                <a href="" class="foot">Cookie Policy</a>
+                <a href="" class="foot">Accessibility</a>
+                <a href="" class="foot">Ads info</a>
+                <a href="" class="foot">More <span class="material-symbols-outlined fadeicon">more_horiz</span></a>
+                <span class="foot">© 2023 X Corp.</span>
+            </div>
+        </div>
+    </div>  
+    <div class="bottomdiv">
+        <div class="containerdown">
+            <div class="think">
+                <p class="thick">Don’t miss what’s happening</p>
+                <p class="thin">People on Twitter are the first to know.</p>
+            </div>
+            <div class="lastbtn">
+                <div class="btn1parent">
+                    <button class="btn1">Log in</button>
+                    <div class="overlay">
+                        <div class="btn1content">
+                            <div class="canlogo">
+                                <span><span class="material-symbols-outlined">close</span></span>
+                                <span><img src="twitt logo.png" alt="" class="logo"></span>
+                                <span></span>
+                            </div>
+                            <p class="signhead">
+                                Sign in to Twitter
+                            </p>
+                            <div class="cydiv2 asd">
+                                <div class="gapflex">
+                                    <img src="tao nm.jpg" alt="" class="minedp">
+                                    <div class="flexw">
+                                        <p class="bld">Sign in as Taofeekat</p>
+                                        <p class="greyy">taofeekatb1@gmail.com</p>
+                                    </div>
+                                </div>
+                                <img src="google icon.png" alt="" class="ggle">
+                            </div>
+                            <div class="cydiv2 qwe">
+                                <i class="icofont-brand-apple"></i>
+                                <p>Sign up with Apple</p>
+                            </div>
+                            <div class="ordiv">
+                                <div class="lineor"></div>
+                                <span> or </span>
+                                <div class="lineor"></div>
+                            </div>
+                            <div class="emailipt">
+                                <input type="email" name="username/email" id="email" placeholder="Phone,email,or username" required>
+                            </div>
+                            <div class="subtn">
+                                <a href="password.html"><button id="subtn">Next</button></a>
+                            </div>
+                            <div class="subtn2">
+                                <button id="subtn2">Forget password?</button>
+                            </div>
+                            <div class="plast">
+                                <p class="p">Don't have an account? <a href="#" class="link">Sign up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn2">Sign up</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
